@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>SolNeat.PolicyEngine.EF</PackageId>
+		<Authors>SolNeat</Authors>
+		<Description>A lightweight headless RBAC PAP/PDP/PEP authorization engine integrated seamlessly with OpenIddict.</Description>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\SolNeat.PolicyEngine\SolNeat.PolicyEngine.csproj" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.20" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.20" />
+	</ItemGroup>
+</Project>

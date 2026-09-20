@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="SolNeat.AuthDemo/SolNeat.AuthDemo.csproj" />
+  <Project Path="SolNeat.PolicyEngine.EF/SolNeat.PolicyEngine.EF.csproj" />
+  <Project Path="SolNeat.PolicyEngine.Openiddict/SolNeat.PolicyEngine.OpenIddict.csproj" />
+  <Project Path="SolNeat.PolicyEngine/SolNeat.PolicyEngine.csproj" />
+</Solution>
