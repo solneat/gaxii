@@ -24,13 +24,12 @@ public class DbInitializer : IHostedService
 
         await policyDb.Database.EnsureCreatedAsync(cancellationToken);
 
+
         var policyManager = scope.ServiceProvider.GetRequiredService<IPolicyManager>();
 
         var actor = await policyManager.GetOrCreateActorAsync("postman-client", cancellationToken);
 
-        var sol = await policyManager.CreateSolutionAsync("main", "description of main", cancellationToken: cancellationToken);
-
-        var role = await policyManager.CreateRoleAsync(sol.Id, "worker", cancellationToken);
+        var role = await policyManager.CreateRoleAsync("worker", cancellationToken);
 
         var permissionsToCreate = new (string Resource, string Action)[]
         {

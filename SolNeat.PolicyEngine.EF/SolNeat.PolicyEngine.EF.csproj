@@ -4,10 +4,24 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+
 		<PackageId>SolNeat.PolicyEngine.EF</PackageId>
+		<Version>1.0.0</Version>
 		<Authors>SolNeat</Authors>
-		<Description>A lightweight headless RBAC PAP/PDP/PEP authorization engine integrated seamlessly with OpenIddict.</Description>
+		<Company>SolNeat</Company>
+		<Title>SolNeat PolicyEngine EF Core Store</Title>
+		<Description>Entity Framework Core persistence store and relational database mappings for SolNeat PolicyEngine authorization ecosystem.</Description>
+		<PackageTags>rbac;authorization;efcore;entityframework;store;persistence;ddd;onion</PackageTags>
+		
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageIcon>logo.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\logo.png" Pack="true" PackagePath="logo.png" />
+		<None Include="..\README.md" Pack="true" PackagePath="README.md" />
+	</ItemGroup>
 	
 	<ItemGroup>
 		<ProjectReference Include="..\SolNeat.PolicyEngine\SolNeat.PolicyEngine.csproj" />

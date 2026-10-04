@@ -4,15 +4,47 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<PackageId>SolNeat.PolicyEngine.OpenIddict</PackageId>
+
 		<Authors>SolNeat</Authors>
-		<Description>A lightweight headless RBAC PAP/PDP/PEP authorization engine integrated seamlessly with OpenIddict.</Description>
+		<Company>SolNeat</Company>
+		<Title>SolNeat PolicyEngine OpenIddict Extensions</Title>
+		<Description>OpenIddict integration extensions for SolNeat PolicyEngine authorization ecosystem. Serves as a Policy Enforcement Point (PEP) bridge during OAuth 2.0 / OIDC token issuance, evaluating PDP policies and serializing fine-grained principal permissions into RFC 9068-compliant JWT access tokens via the custom 'x-access-permission' claim (Resource:Action specification).</Description>
+		<PackageTags>openiddict;oauth2;oidc;jwt;rfc9068;claims;pep;pdp;pap;authorization;rbac;abac;role;resource;action;security;aspnetcore</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageIcon>logo.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Content Include="Templates\TotpSetupTemplate.html">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Templates\TotpTemplate.html">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="Templates\LoginTemplate.html">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\logo.png" Pack="true" PackagePath="logo.png" />
+		<None Include="..\README.md" Pack="true" PackagePath="README.md" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\SolNeat.PolicyEngine\SolNeat.PolicyEngine.csproj" />
+		<PackageReference Include="Microsoft.AspNetCore.Http" Version="2.3.13" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.13" />
+		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.3.13" />
+		<PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.3.13" />
 		<PackageReference Include="OpenIddict.Abstractions" Version="7.7.1" />
 		<PackageReference Include="OpenIddict.Server" Version="7.7.1" />
+		<PackageReference Include="Novell.Directory.Ldap.NETStandard" Version="4.0.0" />
+		<PackageReference Include="OpenIddict.Server.AspNetCore" Version="7.7.1" />
+		<PackageReference Include="Otp.NET" Version="1.4.1" />
+		<PackageReference Include="Fido2" Version="4.1.1" />		
 	</ItemGroup>
 
 </Project>

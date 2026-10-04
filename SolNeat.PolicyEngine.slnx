@@ -1,6 +1,12 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="logo.png" />
+    <File Path="README.md" />
+  </Folder>
   <Project Path="SolNeat.AuthDemo/SolNeat.AuthDemo.csproj" />
   <Project Path="SolNeat.PolicyEngine.EF/SolNeat.PolicyEngine.EF.csproj" />
   <Project Path="SolNeat.PolicyEngine.Openiddict/SolNeat.PolicyEngine.OpenIddict.csproj" />
+  <Project Path="SolNeat.PolicyEngine.Redis/SolNeat.PolicyEngine.Redis.csproj" />
   <Project Path="SolNeat.PolicyEngine/SolNeat.PolicyEngine.csproj" />
+  <Project Path="SolNeat.PolicyEngine.AuthN/SolNeat.PolicyEngine.AuthN.csproj" />
 </Solution>

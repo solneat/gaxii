@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageId>SolNeat.PolicyEngine.Redis</PackageId>
+		<Authors>SolNeat</Authors>
+		<Description>A lightweight headless RBAC PAP/PDP/PEP authorization engine integrated seamlessly with OpenIddict.</Description>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<ProjectReference Include="..\SolNeat.PolicyEngine\SolNeat.PolicyEngine.csproj" />
+		<PackageReference Include="StackExchange.Redis" Version="2.7.33" />
+	</ItemGroup>
+</Project>

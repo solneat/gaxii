@@ -31,7 +31,7 @@ builder.Services.AddOpenIddict()
     .AddServer(options =>
     {
         options.SetTokenEndpointUris("/connect/token");
-        
+
         options.AllowClientCredentialsFlow();
 
         options.AddDevelopmentEncryptionCertificate();
@@ -46,13 +46,7 @@ builder.Services.AddOpenIddict()
 
         options.AcceptAnonymousClients();
 
-        options.AddSolNeatPolicyEngine()
-            .ConfigureAuthentication(o => 
-            { 
-                o.Ldap.Host = "10.14.0.154"; 
-            })
-            .UseLoginEngine()
-            .UseDbContext<PolicyEngineDbContext>();
+        options.AddSolNeatPolicyEngine().UseDbContext<PolicyEngineDbContext>();
     })
     .AddValidation(options =>
     {

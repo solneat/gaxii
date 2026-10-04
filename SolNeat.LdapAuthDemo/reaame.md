@@ -1,0 +1,2 @@
+
+curl -X POST "https://localhost:7080/connect/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&client_id=postman-client&client_secret=secret_key&scope=api" --insecure
